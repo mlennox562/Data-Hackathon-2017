@@ -1,9 +1,7 @@
-# Kaggle - Allstate Claims Severity
-
-My solution for "[Allstate Claims Severity](https://www.kaggle.com/c/allstate-claims-severity)" competition, 2nd place.
-
-Public LB score: 1098.07061
-Private LB score: 1110.01364
+Create the following folders:
+* preds - Used to holder the model predictions.
+* cache - Used to holder the pickled data.
+* preds - Used to holder the original csv training and testing files.
 
 Used packages:
 * [Sklearn](http://scikit-learn.org/)
