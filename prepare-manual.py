@@ -3,17 +3,19 @@ import pandas as pd
 from util import Dataset
 
 for name in ['train', 'test']:
-    print "Processing %s..." % name
+    print("Processing %s..." % name)
 
     idx = Dataset.load_part(name, 'id')
 
     # Load parts
-    numeric = pd.DataFrame(Dataset.load_part(name, 'numeric'), columns=Dataset.get_part_features('numeric_lin'), index=idx)
-    numeric_lin = pd.DataFrame(Dataset.load_part(name, 'numeric_lin'), columns=Dataset.get_part_features('numeric_lin'), index=idx)
+    numeric = pd.DataFrame(Dataset.load_part(name, 'numeric'), columns=Dataset.get_part_features('numeric_lin'),
+                           index=idx)
+    numeric_lin = pd.DataFrame(Dataset.load_part(name, 'numeric_lin'), columns=Dataset.get_part_features('numeric_lin'),
+                               index=idx)
 
     # Build features
     df = pd.DataFrame(index=idx)
-    #df['cont14'] = numeric['cont14']
+    # df['cont14'] = numeric['cont14']
     df['cont_1_9_diff'] = numeric_lin['cont9'] - numeric_lin['cont1']
 
     # Save column names
@@ -22,4 +24,4 @@ for name in ['train', 'test']:
 
     Dataset(manual=df.values).save(name)
 
-print "Done."
+print("Done.")

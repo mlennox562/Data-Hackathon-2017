@@ -1,10 +1,10 @@
 import numpy as np
 import scipy.sparse as sp
-
 from tqdm import tqdm
+
 from util import Dataset
 
-print "Loading data..."
+print("Loading data...")
 
 num_features = Dataset.get_part_features('numeric')
 
@@ -33,10 +33,10 @@ with tqdm(total=train_num.shape[1], desc='  Transforming', unit='cols') as pbar:
 
         pbar.update(1)
 
-print "Saving..."
+print("Saving...")
 
 Dataset.save_part_features('numeric_edges', features)
 Dataset(numeric_edges=sp.csr_matrix(np.hstack(train_res))).save('train')
 Dataset(numeric_edges=sp.csr_matrix(np.hstack(test_res))).save('test')
 
-print "Done."
+print("Done.")

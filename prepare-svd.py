@@ -1,9 +1,8 @@
 import numpy as np
+from sklearn.decomposition import TruncatedSVD
+from sklearn.preprocessing import scale
 
 from util import Dataset, vstack, hstack
-
-from sklearn.preprocessing import scale
-from sklearn.decomposition import TruncatedSVD
 
 n_components = 500  # 500 components explain 99.8% of variance
 
@@ -19,7 +18,8 @@ train_cnt = train_num.shape[0]
 
 print("Combining data...")
 
-all_data = hstack((scale(vstack((train_num, test_num)).astype(np.float64)).astype(np.float32), vstack((train_cat, test_cat))))
+all_data = hstack(
+    (scale(vstack((train_num, test_num)).astype(np.float64)).astype(np.float32), vstack((train_cat, test_cat))))
 
 del train_num, train_cat, test_num, test_cat
 

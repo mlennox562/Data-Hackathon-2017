@@ -1,7 +1,7 @@
 import numpy as np
+from sklearn.preprocessing import scale
 
 from util import Dataset
-from sklearn.preprocessing import scale
 
 print("Loading data...")
 

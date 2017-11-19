@@ -1,8 +1,7 @@
 import numpy as np
-
 from scipy.stats import skew, boxcox
-
 from tqdm import tqdm
+
 from util import Dataset
 
 print("Loading data...")
@@ -20,7 +19,7 @@ with tqdm(total=train_num.shape[1], desc='  Transforming', unit='cols') as pbar:
         sk = skew(values)
 
         if sk > 0.25:
-            values_enc, lam = boxcox(values+1)
+            values_enc, lam = boxcox(values + 1)
 
             train_num_enc[:, col] = values_enc[:train_num.shape[0]]
             test_num_enc[:, col] = values_enc[train_num.shape[0]:]

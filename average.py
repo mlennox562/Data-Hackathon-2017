@@ -1,4 +1,5 @@
 import pandas as pd
+from functools import reduce
 
 files = [
     '20161212-2301-l3-qr-foldavg-1115.79637-test-foldavg',
@@ -30,4 +31,4 @@ preds = [pd.read_csv('preds/%s.csv' % f, index_col='id') for f in files]
 pred = reduce(lambda a, b: a + b, preds) / len(preds)
 pred.to_csv('avg-2.csv')
 
-print "Done."
+print("Done.")

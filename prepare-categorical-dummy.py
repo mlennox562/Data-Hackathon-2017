@@ -1,7 +1,7 @@
 import numpy as np
 import scipy.sparse as sp
-
 from tqdm import tqdm
+
 from util import Dataset
 
 print("Loading data...")
@@ -27,8 +27,10 @@ with tqdm(total=len(cats), desc='  Encoding', unit='cols') as pbar:
         for val in value_counts:
             if value_counts[val] >= min_freq:
                 features.append('%s_%s' % (cat, val))
-                train_cat_enc.append(sp.csr_matrix((train_cat[:, col] == val).astype(np.uint8).reshape((train_cat.shape[0], 1))))
-                test_cat_enc.append(sp.csr_matrix((test_cat[:, col] == val).astype(np.uint8).reshape((test_cat.shape[0], 1))))
+                train_cat_enc.append(
+                    sp.csr_matrix((train_cat[:, col] == val).astype(np.uint8).reshape((train_cat.shape[0], 1))))
+                test_cat_enc.append(
+                    sp.csr_matrix((test_cat[:, col] == val).astype(np.uint8).reshape((test_cat.shape[0], 1))))
             else:
                 train_rares += (train_cat[:, col] == val).astype(np.uint8)
                 test_rares += (test_cat[:, col] == val).astype(np.uint8)

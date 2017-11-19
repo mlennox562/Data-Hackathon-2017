@@ -1,11 +1,9 @@
 import numpy as np
-
-from scipy.stats.mstats import rankdata
 from scipy.special import erfinv
-
+from scipy.stats.mstats import rankdata
 from sklearn.preprocessing import scale, minmax_scale
-
 from tqdm import tqdm
+
 from util import Dataset
 
 print("Loading data...")

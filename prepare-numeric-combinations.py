@@ -3,7 +3,7 @@ import pandas as pd
 from util import Dataset
 
 for name in ['train', 'test']:
-    print "Processing %s..." % name
+    print("Processing %s..." % name)
 
     num = pd.DataFrame(Dataset.load_part(name, 'numeric'), columns=Dataset.get_part_features('numeric'))
     df = pd.DataFrame(index=num.index)
@@ -25,4 +25,4 @@ for name in ['train', 'test']:
 
     Dataset(numeric_combinations=df.values).save(name)
 
-print "Done."
+print("Done.")

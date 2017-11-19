@@ -105,8 +105,8 @@ venv.bak/
 /input/
 /cache/
 .idea/
-
 /preds/
 /libfm_models/
 /JupyterNotebooks/GP Prescribing - August 2017 (csv).csv
 /JupyterNotebooks/GP Prescribing - July 2017 (csv).csv
+/JupyterNotebooks/.ipynb_checkpoints/

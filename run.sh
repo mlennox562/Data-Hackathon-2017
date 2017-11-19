@@ -17,28 +17,28 @@ train() {
 
 # Prepare features
 
-#prepare basic
-#prepare numeric-boxcox
-#prepare numeric-scaled
-#prepare numeric-rank-norm
-#prepare categorical-encoded
-#prepare categorical-counts
+prepare basic
+prepare numeric-boxcox
+prepare numeric-scaled
+prepare numeric-rank-norm
+prepare categorical-encoded
+prepare categorical-counts
 
 #prepare categorical-dummy #Leave this script out.
 #prepare svd #Leave this script out.
 
 ## Basic models
-#train lr-ce
+train lr-ce
 #
-#train et-ce
-#train rf-ce
-#train gb-ce
+train et-ce
+train rf-ce
+train gb-ce
 #
 ## LibFM
 #train libfm-ce #Don't have it installed!
 #
 ## LightGBM
-#train lgb-ce
+train lgb-ce
 #
 ## XGB
 train xgb-ce

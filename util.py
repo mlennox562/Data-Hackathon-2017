@@ -1,10 +1,9 @@
+import os
+import pickle
+
 import numpy as np
 import pandas as pd
-
 import scipy.sparse as sp
-
-import pickle
-import os
 
 n_folds = 5
 
@@ -66,7 +65,6 @@ def load_prediction(split, name, mode='fulltrain'):
 
 
 class Dataset(object):
-
     part_types = {
         'id': 'd1',
         'loss': 'd1',

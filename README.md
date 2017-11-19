@@ -1,7 +1,7 @@
 Create the following folders:
-* preds - Used to holder the model predictions.
-* cache - Used to holder the pickled data.
-* preds - Used to holder the original csv training and testing files.
+* preds - Used to hold the model predictions.
+* cache - Used to hold the pickled data.
+* preds - Used to hold the original csv training and testing files.
 
 Used packages:
 * [Sklearn](http://scikit-learn.org/)
