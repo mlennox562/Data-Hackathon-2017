@@ -108,5 +108,5 @@ venv.bak/
 
 /preds/
 /libfm_models/
-/JupyterNotebooks/
-!/JupyterNotebooks/AllstateDataHackathon.ipynb
+/JupyterNotebooks/GP Prescribing - August 2017 (csv).csv
+/JupyterNotebooks/GP Prescribing - July 2017 (csv).csv
