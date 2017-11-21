@@ -4,7 +4,7 @@ from sklearn.preprocessing import OneHotEncoder
 import numpy as np
 
 #Object to binarize categorical data
-class Binarizer(BaseEstimator, TransformerMixin):
+class CatEncoder(BaseEstimator, TransformerMixin):
     def __init__(self):
         self.label_encoder = LabelEncoder()
         self.one_hot_encoder = OneHotEncoder(sparse = True)
