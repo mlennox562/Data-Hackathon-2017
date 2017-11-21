@@ -53,15 +53,8 @@ class Word2VecEncoder:
         text = []
 
         print("Processing training text")
-        print("")
-        perc_count = 0
-        print("Progress - 0%")
         for num in range(len(self.corpus_data)):
-            if int((num / len(self.corpus_data) * 100)) == perc_count + 10:
-                perc_count += 10
-                print("Progress - ", perc_count, "%")
             text += self.processText(str(self.corpus_data[num]), self.token_punkt, remove_stops = rm_stops)
-            print("Progress - 100%")
 
         print("Training word2vec model.....")
         self.model = word2vec.Word2Vec(text, workers = num_workers, size = num_features, min_count = min_word_count, window = context, sample = downsampling)
