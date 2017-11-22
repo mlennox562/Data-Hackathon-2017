@@ -108,9 +108,9 @@ venv.bak/
 /preds/
 /libfm_models/
 /JupyterNotebooks/.ipynb_checkpoints/
-JupyterNotebooks/Untitled.ipynb
 JupyterNotebooks/competition_employment.csv
 JupyterNotebooks/competition_starter.csv
 JupyterNotebooks/competition_waiting.csv
 JupyterNotebooks/holdout.csv
 JupyterNotebooks/OldR&D/
+/JupyterNotebooks/Holdout.ipynb
