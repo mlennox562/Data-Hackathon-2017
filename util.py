@@ -59,15 +59,15 @@ def load_prediction(split, name, mode='fulltrain'):
         return sum(preds) / len(preds)
     else:
         if split == 'test' and os.path.exists('preds/%s-%s.csv' % (name, 'test-%s' % mode)):
-            return pd.read_csv('preds/%s-%s.csv' % (name, 'test-%s' % mode), index_col='id').iloc[:, 0]
+            return pd.read_csv('preds/%s-%s.csv' % (name, 'test-%s' % mode), index_col='record_id').iloc[:, 0]
 
-        return pd.read_csv('preds/%s-%s.csv' % (name, split), index_col='id').iloc[:, 0]
+        return pd.read_csv('preds/%s-%s.csv' % (name, split), index_col='record_id').iloc[:, 0]
 
 
 class Dataset(object):
     part_types = {
-        'id': 'd1',
-        'loss': 'd1',
+        'record_id': 'd1',
+        'gp_cost': 'd1',
         'numeric': 'd2',
         'numeric_lin': 'd2',
         'numeric_scaled': 'd2',
