@@ -18,11 +18,11 @@ train() {
 # Prepare features
 
 prepare basic
-prepare numeric-boxcox
-prepare numeric-scaled
-prepare numeric-rank-norm
-prepare categorical-encoded
-prepare categorical-counts
+#prepare numeric-boxcox
+#prepare numeric-scaled
+#prepare numeric-rank-norm
+#prepare categorical-encoded
+#prepare categorical-counts
 
 #prepare categorical-dummy #Leave this script out.
 #prepare svd #Leave this script out.
