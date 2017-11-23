@@ -67,7 +67,7 @@ def load_prediction(split, name, mode='fulltrain'):
 class Dataset(object):
     part_types = {
         'record_id': 'd1',
-        'gp_cost': 'd1',
+        'prediction': 'd1',
         'numeric': 'd2',
         'numeric_lin': 'd2',
         'numeric_scaled': 'd2',

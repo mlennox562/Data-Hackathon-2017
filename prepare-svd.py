@@ -32,7 +32,7 @@ print("Explained variance ratio: %.5f" % np.sum(svd.explained_variance_ratio_))
 
 print("Saving...")
 
-Dataset.save_part_features('svd', ['svd%d' % i for i in xrange(n_components)])
+Dataset.save_part_features('svd', ['svd%d' % i for i in range(n_components)])
 Dataset(svd=res[:train_cnt]).save('train')
 Dataset(svd=res[train_cnt:]).save('test')
 
