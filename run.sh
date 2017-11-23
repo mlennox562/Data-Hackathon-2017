@@ -28,18 +28,18 @@ train() {
 #prepare svd #Leave this script out.
 
 ## Basic models
-train lr-ce
-train lr-cd
-train lr-cd-2
-train lr-cd-nr
-train ab-ce
-train ab-cd
-train et-ce
-train et-ce-2
-train et-ce-3
-train et-cd
-train et-cd-2
-train et-cd-3
+#train lr-ce
+#train lr-cd
+#train lr-cd-2
+#train lr-cd-nr
+#train ab-ce
+#train ab-cd
+#train et-ce
+#train et-ce-2
+#train et-ce-3
+#train et-cd
+#train et-cd-2
+#train et-cd-3
 train rf-ce
 train rf-ce-2
 train rf-cd
