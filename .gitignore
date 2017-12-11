@@ -110,5 +110,5 @@ venv.bak/
 .ipynb_checkpoints/
 datasets/
 /JupyterNotebooks/
-/lin_reg_sub.csv
-/final_sub.csv
+lin_reg_sub.csv
+final_sub.csv
